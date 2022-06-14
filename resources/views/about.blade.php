@@ -65,10 +65,10 @@
                     class="about-page__advantages__card-item"
                     style="background-image: url(../images/about/about-bg-block.png)"
                 >
-                    <img
-                        class="about-page__advantages__card-icon"
-                        src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image1) }}"
-                    />
+                    <div class="about-page__img-wrapper">
+                        <img class="about-page__advantages__card-icon" src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image1) }}"/>
+                    </div>
+
                     <h5 class="about-page__advantages__card-title">{{ $advantage->title1 }}</h5>
                     <p class="about-page__advantages__card-text">
                         {{ $advantage->text1 }}
@@ -78,10 +78,10 @@
                     class="about-page__advantages__card-item"
                     style="background-image: url(../images/about/about-bg-block.png)"
                 >
-                    <img
-                        class="about-page__advantages__card-icon"
-                        src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image2) }}"
-                    />
+                    <div class="about-page__img-wrapper">
+                        <img class="about-page__advantages__card-icon" src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image2) }}"/>
+                    </div>
+
                     <h5 class="about-page__advantages__card-title">{{ $advantage->title2 }}</h5>
                     <p class="about-page__advantages__card-text">
                         {{ $advantage->text2 }}
@@ -91,10 +91,11 @@
                     class="about-page__advantages__card-item"
                     style="background-image: url(../images/about/about-bg-block.png)"
                 >
-                    <img
-                        class="about-page__advantages__card-icon"
-                        src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image3) }}"
-                    />
+                    <div class="about-page__img-wrapper">
+                        <img class="about-page__advantages__card-icon" src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image3) }}"/>
+                    </div>
+
+
                     <h5 class="about-page__advantages__card-title">{{ $advantage->title3 }}</h5>
                     <p class="about-page__advantages__card-text">{{ $advantage->text3 }}
                     </p>
@@ -103,13 +104,12 @@
                     class="about-page__advantages__card-item"
                     style="background-image: url(../images/about/about-bg-block.png)"
                 >
-                    <img
-                        class="about-page__advantages__card-icon"
-                        src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image4)  }}"
-                    />
+                    <div class="about-page__img-wrapper">
+                        <img class="about-page__advantages__card-icon" src="{{ \Illuminate\Support\Facades\Storage::url($advantage->image4) }}"/>
+                    </div>
                     <h5 class="about-page__advantages__card-title">{{ $advantage->title4 }}</h5>
                     <p class="about-page__advantages__card-text">
-                      {{ $advantage->text4 }}
+                        {{ $advantage->text4 }}
                     </p>
                 </div>
             </div>
@@ -174,10 +174,10 @@
                 Среди наших клиентов и партнёров – известные бренды
             </h3>
             <div class="about-page__partners__content">
-               @foreach($partner as $block)
-                <div class="about-page__partners__content-item">
-                    <img src="{{ \Illuminate\Support\Facades\Storage::url($block->partner) }}"/>
-                </div>
+                @foreach($partner as $block)
+                    <div class="about-page__partners__content-item">
+                        <img src="{{ \Illuminate\Support\Facades\Storage::url($block->partner) }}"/>
+                    </div>
                 @endforeach
             </div>
             <p class="about-page__partners__bottom-text">И многие другие...</p>
@@ -192,9 +192,9 @@
             </h3>
             <div class="about-page__licenses__content">
                 @foreach($license as $block)
-                <div class="about-page__licenses__content-item">
-                    <img src="{{ \Illuminate\Support\Facades\Storage::url($block->image) }}"/>
-                </div>
+                    <div class="about-page__licenses__content-item">
+                        <img src="{{ \Illuminate\Support\Facades\Storage::url($block->image) }}"/>
+                    </div>
                 @endforeach
             </div>
         </div>

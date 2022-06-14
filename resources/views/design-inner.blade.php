@@ -35,16 +35,16 @@
                     foreach ($images as $key=>$value) {
                         if ($i == 1) {
                             $html .= '<div class="design-page-inner swiper-slide">';
-                            $html .= '<div class="design-page-inner__img">
+                            $html .= '<div class="design-page-inner__img box-' . $i . '">
                             <img src="'.storage($value).'" alt="image"></div>';
                             $i++;
                     } else if ($i == 4) {
-                            $html .= '<div class="design-page-inner__img">
+                            $html .= '<div class="design-page-inner__img box-' . $i . '">
                             <img src="'.storage($value).'" alt="image"></div>';
                             $html .= '</div>';
                             $i = 1;
                         } else {
-                            $html .= '<div class="design-page-inner__img">
+                            $html .= '<div class="design-page-inner__img box-' . $i . '">
                             <img src="'.storage($value).'" alt="image"></div>';
                             $i++;
                         }

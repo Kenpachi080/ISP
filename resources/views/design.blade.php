@@ -24,10 +24,11 @@
                         $i++;
                         $src = $block->image;
                         $url = str_replace('\\', '/', $src);
-                        if ($i < 9) {?>
+                        ?>
                         <div
                             style="background: url('{{ \Illuminate\Support\Facades\Storage::url($url) }}') center center/cover no-repeat;"
                             class="design-page__img box-{{$i}}">
+                            <a href="{{ route('singledesign', $block->id) }}" class="hidden-link"></a>
                             <div class="design-page__inner">
                                 <a href="{{ route('singledesign', $block->id) }}"
                                    class="design-page__link">Проектирование</a>
@@ -37,33 +38,8 @@
                                 </a>
                             </div>
                         </div>
-                        <?php } else if ($i == 9) {?>
-                        <div
-                            style="background: url('{{ \Illuminate\Support\Facades\Storage::url($url) }}') center center/cover no-repeat;"
-                            class="design-page__img box-{{$i}}">
-                            <div class="design-page__inner">
-                                <a href="{{ route('singledesign', $block->id) }}"
-                                   class="design-page__link">Проектирование</a>
-                                <span class="design-page__title">{{ $block->title }}</span>
-                                <a href="{{ route('singledesign', $block->id) }}" class="design-page__btn">
-                                    <img src="../images/icons/arrow-rigth.svg" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                </div>
-                <?php  } else if ($i > 9) {?>
-                <div style="background: url('{{ \Illuminate\Support\Facades\Storage::url($url) }}') center center/cover no-repeat;" class="design-page__img flex">
-                    <div class="design-page__inner">
-                        <a href="{{ route('singledesign', $block->id) }}" class="design-page__link-trans">Проектирование</a>
-                        <span class="design-page__title">{{ $block->title }}</span>
-                        <a href="{{ route('singledesign', $block->id) }}" class="design-page__btn">
-                            <img src="../images/icons/arrow-rigth.svg" alt="icon">
-                        </a>
-                    </div>
-                </div>
-                <?php }
-                ?>
                 @endforeach
+                </div>
             </div>
         </div>
 

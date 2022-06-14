@@ -86,18 +86,18 @@ $title = \App\Models\Title::first();
                     <input class="questions__input" name="name" type="text" placeholder="Введите имя" />
                 </div>
                 <div class="questions__form-input">
-                    <label class="questions__label"> Ваш телефон </label>
-                    <input class="questions__input" type="text" name="phone" placeholder="+7 (" />
+                    <label class="questions__label" for="tel"> Ваш телефон </label>
+                    <input class="questions__input" type="text" attrname="telephone1" name="phone" placeholder="+7 (" />
                 </div>
                 <button class="button questions__btn">Отправить</button>
             </div>
             <div class="questions__personal">
                 <input
-                    class="questions__personal-input"
-                    type="checkbox"
-                    name="checkbox"
-                    value="value"
-                    id="questions__checkbox"
+                        class="questions__personal-input"
+                        type="checkbox"
+                        name="checkbox"
+                        value="value"
+                        id="questions__checkbox"
                 />
                 <label class="questions__personal-label" for="questions__checkbox">
                     Я даю своё согласие на обработку
@@ -121,7 +121,7 @@ $title = \App\Models\Title::first();
             </div>
             <div class="footer__developed">
                 <p class="footer__developed-text">Разработано в</p>
-                <a class="footer__developed-link" href="https://www.a-lux.kz/">
+                <a class="footer__developed-link" target="_blank" href="https://www.a-lux.kz/">
                     <img class="footer__developed-img" src="../images/alux-logo.png" alt="" />
                 </a>
             </div>
@@ -129,7 +129,8 @@ $title = \App\Models\Title::first();
     </div>
 </footer>
 
-<script src="../js/main.min.js"></script>
+<script src="{{ asset('js/main.min.js') }}"></script>
+<script src="{{ asset('js/vanilla-masker.min.js') }}"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

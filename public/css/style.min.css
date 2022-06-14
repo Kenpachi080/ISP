@@ -1,9 +1,10 @@
 
-.building__info * {
+.building__text * {
     color: white !important;
 }
 
-.engineering__services * {
+
+.engineering__services-list * {
     color: white !important;
 }
 
@@ -1846,6 +1847,7 @@ button {
 
 .intro__text {
     font-size: 24px;
+    font-weight: 600;
     font-size: 24px;
     line-height: 36px;
     background: -o-linear-gradient(336.91deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), -o-linear-gradient(356.02deg, #fcf1b5 -17.56%, #ffbf31 107.31%);
@@ -2109,7 +2111,18 @@ button {
 .building__projects-item {
     width: 100%;
     height: 225px;
-    background-size: cover
+    background-size: cover;
+    position: relative;
+    z-index: 1
+}
+
+.building__projects-item .hidden-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
 }
 
 .building__projects-middle {
@@ -4697,7 +4710,7 @@ button {
 
 .engineering__info {
     line-height: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     color: #000000;
     text-align: center;
     max-width: 900px;
@@ -4915,7 +4928,7 @@ button {
 }
 
 .engineering__content {
-    margin-top: 80px
+    margin-top: 50px
 }
 
 .engineering__content-text {
@@ -5445,3 +5458,4 @@ button {
         display: none
     }
 }
+

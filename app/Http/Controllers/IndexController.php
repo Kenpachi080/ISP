@@ -33,7 +33,7 @@ class IndexController extends Controller
         $construction = MainConstruction::first();
         $consalting = MainConsalting::first();
         $engineering = MainEngineering::first();
-        $buildingcard = DesignCard::where('main', '=', 1)->orderBy('sort', 'asc')->get()->take(4);
+        $buildingcard = DesignCard::where('main', '=', 1)->orderBy('mainsort', 'asc')->get()->take(4);
         $constructioncard = ConstructionCard::where('main', '=', 1)->get()->take(3);
         $data = [
             'main' => $main,
@@ -72,7 +72,7 @@ class IndexController extends Controller
 
     public function building()
     {
-        $build = ConstructionCard::all();
+        $build = ConstructionCard::orderBy('sort', 'asc')->get();
         $data = [
             'data' => $build
         ];
@@ -97,7 +97,7 @@ class IndexController extends Controller
 
     public function design()
     {
-        $design = DesignCard::orderBy('sort', 'asc')->get();
+        $design = DesignCard::orderBy('sort', 'asc')->get()->take(18);
         $data = [
             'data' => $design,
             'title' => 'Проектированиe',
@@ -147,4 +147,5 @@ class IndexController extends Controller
         return back();
     }
 }
+
 

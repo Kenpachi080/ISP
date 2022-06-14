@@ -28,6 +28,7 @@
                         <div
                             style="background: url('{{ \Illuminate\Support\Facades\Storage::url($url) }}') center center/cover no-repeat;"
                             class="design-page__img box-{{$i}}">
+                            <a href="{{ route('singlebuild', $block->id) }}" class="hidden-link"></a>
                             <div class="design-page__inner">
                                 <a href="{{ route('singlebuild', $block->id) }}"
                                    class="design-page__link">Строительство</a>
